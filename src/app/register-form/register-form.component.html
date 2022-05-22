@@ -1,0 +1,215 @@
+<main>
+  <div class="main-banner">
+    <div class="box-image-banner">
+        <div class="shape-1">
+            <img class="animation-round" src="./assets/image/shape-1.png" alt="shape" title="shape-1">
+        </div>
+        <div class="shape-2">
+            <img src="./assets/image/shape-2.png" alt="shape" title="shape-2">
+        </div>
+        <div class="shape-3">
+            <img src="./assets/image/shape-3.png" alt="shape" title="shape-3">
+        </div>
+        <div class="shape-4">
+            <img src="./assets/image/shape-24.png" alt="shape" title="shape-4">
+        </div>
+        <div class="shape-5 hidden-xs">
+            <img class="animation-left" src="./assets/image/shape-5.png" alt="shape" title="shape-5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-main-banner">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Register</li>
+                </ol>
+              </nav>
+              <div class="title-page">
+                  <h2>
+                    Registration 
+                    <span>
+                        Form
+                    </span>
+                  </h2>
+              </div>
+        </div>
+    </div>
+  </div>
+  <div class="devider-50"></div>
+  <div class="main-content">
+      <div class="container">
+          <div class="content-register-form">
+              <div class="register-image">
+                  <div class="shape-register">
+                      <img src="./assets/image/shape-26.png" alt="shape">
+                  </div>
+                  <img class="img-register-login" src="./assets/image/register-login.png" alt="register-login">
+              </div>
+              <div class="body-form-register">
+                  <div class="title-page">
+                      <h3>
+                          Registration
+                          <span>Now</span>
+                      </h3>
+                  </div>
+                  <div class="form-register">
+                    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <div class="item-form">
+                            <input type="text" placeholder="FirstName" formControlName="firstName" />
+                            <div  class="invalid-feedback" *ngIf="!signupForm.get('firstName')?.valid && signupForm.get('firstName')?.touched">
+                                Please choose a First name.
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="text" placeholder="LastName" formControlName="LastName" />
+                            <div id="inputLnameFeedback" class="invalid-feedback" *ngIf="!signupForm.get('LastName')?.valid && signupForm.get('LastName')?.touched">
+                                Please choose a Last name.
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="email" placeholder="Email" formControlName="email" />
+                            <div id="inputMailFeedback" class="invalid-feedback" *ngIf="!signupForm.get('email')?.valid && signupForm.get('email')?.touched">
+                                Please choose a Email.
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="password" placeholder="Password" formControlName="password" minlength="2" />
+                            <div *ngIf="signupForm.get('password')?.errors?.['minlength']">
+                                Password must be at least 8 characters
+                              </div>
+                              <div id="inputpasssFeedback" class="invalid-feedback" *ngIf="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
+                                Please choose a Password.
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <input type="password" placeholder="Confirm Password" formControlName="passwordConfirm" minlength="2" />
+                            <div *ngIf="signupForm.get('password')?.errors?.['minlength']">
+                                Confirm Password does not match
+                              </div> 
+                              <div class="invalid-feedback" *ngIf="!signupForm.get('passwordConfirm')?.valid && signupForm.get('passwordConfirm')?.touched">
+                                Please choose a Password.
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <label class="col-form-label" for="inputFile">Upload a national card </label>
+                            <input class="form-control" id="inputFile" type="file" placeholder="National Card" formControlName="nationalCard" />
+                        </div>
+                        <div class="item-form">
+                            <fieldset class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                                <div class="col-sm-10">
+                                  <div class="form-check" *ngFor="let gender of genders">
+                                    <input class="form-check-input" type="radio" [id]="gender" [value]="gender" formControlName="gender" *ngIf="gender as 'checked'">
+                                    <label class="form-check-label" [for]="gender">
+                                        {{ gender }}
+                                    </label>
+                                  </div>
+                                </div>
+                              </fieldset>
+                        </div>
+                        <div class="item-form">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">
+                                  Agree to terms and conditions
+                                </label>
+                              </div>
+                        </div>
+                        <div class="item-form">
+                            <button class="btn-login-register btn btn-primary" type="submit">Create an account</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+<div class="devider-50"></div>
+<!-- <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <label for="inputFname" class="col-sm-2 col-form-label">First name</label>
+      <div class="col-sm-10 has-validation">
+        <input type="text" class="form-control" id="inputFname" formControlName="firstName">
+      </div>
+      <div id="inputFnameFeedback" class="invalid-feedback" *ngIf="!signupForm.get('firstName')?.valid && signupForm.get('firstName')?.touched">
+        Please choose a First name.
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputLname" class="col-sm-2 col-form-label">Last name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputLname" formControlName="LastName">
+      </div>
+      <div id="inputLnameFeedback" class="invalid-feedback" *ngIf="!signupForm.get('LastName')?.valid && signupForm.get('LastName')?.touched">
+        Please choose a Last name.
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" formControlName="email">
+      </div>
+      <div id="inputMailFeedback" class="invalid-feedback" *ngIf="!signupForm.get('email')?.valid && signupForm.get('email')?.touched">
+        Please choose a Email.
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" formControlName="password" minlength="2" (keyup)="validationMinLenght()" />
+      </div>
+      <div *ngIf="signupForm.get('password')?.errors?.['minlength']">
+        Password must be at least 8 characters
+      </div>
+      <div id="inputpasssFeedback" class="invalid-feedback" *ngIf="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
+        Please choose a Password.
+      </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputConfirmPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputConfirmPassword3" formControlName="passwordConfirm" minlength="2" />
+        </div>
+        <div *ngIf="signupForm.get('password')?.errors?.['minlength']">
+          Confirm Password does not match
+        </div> 
+        <div class="invalid-feedback" *ngIf="!signupForm.get('passwordConfirm')?.valid && signupForm.get('passwordConfirm')?.touched">
+          Please choose a Password.
+        </div>
+      </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="inputGroupFile01">Upload a national card </label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control" id="inputGroupFile01" formControlName="nationalCard">
+        </div>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-10">
+        <div class="form-check" *ngFor="let gender of genders">
+          <input class="form-check-input" type="radio" name="gender" [id]="gender" [value]="gender" formControlName="gender" *ngIf="gender as 'checked'">
+          <label class="form-check-label" [for]="gender">
+            {{ gender }}
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="inputFeedback" class="invalid-feedback" *ngIf="!signupForm?.valid && signupForm?.touched">
+        Please enter your complete information .
+      </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+
+   -->

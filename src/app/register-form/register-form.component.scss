@@ -1,0 +1,91 @@
+.invalid-feedback{
+    display: block;
+}
+/* Style-Banner-Register-Page */
+.content-register-form {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 50px 20px;
+    border: 1px solid rgba(48,146,85,0.2);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.content-register-form .register-image{
+    position: relative;
+    background-color: #e7f8ee;
+    border-radius: 10px;
+    padding: 40px 20px;
+    z-index: 1;
+}
+.content-register-form .register-image .shape-register{
+    background-color: #309255;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    text-align: left;
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    z-index: -1;
+}
+.content-register-form .register-image .shape-register img{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.body-form-register{
+    padding: 10px;
+}
+.body-form-register .item-form{
+    padding: 5px 0;
+}
+.body-form-register .item-form input:not([type="checkbox"]):not([type="radio"]){
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 15px;
+    color: #aaa;
+    border: 1px solid rgba(48,146,85,0.2);
+    border-radius: 10px;
+    line-height: 2.5;
+    width: 100%;
+    background-color: #fff;
+    outline: none;
+}
+.body-form-register .title-page{
+    margin-bottom: 30px;
+}
+.btn-login-register.btn{
+    width: 100%;
+    line-height: 3.5;
+    color: #fff;
+    margin: 20px 0;
+}
+.btn-login-register:hover{
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.btn-login-register.btn::before{
+    width: 600px;
+    height: 600px;
+}
+@media only screen and (max-width: 768px){
+    .content-register-form{
+        display: block;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .content-register-form .register-image .shape-register{
+        width: 150px;
+        height: 150px;
+    }
+    .content-register-form .register-image .shape-register img{
+        left: 30px;
+        top: 10px;
+        width: 40px;
+    }
+    .body-form-register{
+        margin-top: 20px;
+    }
+}
