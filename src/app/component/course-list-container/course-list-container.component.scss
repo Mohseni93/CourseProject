@@ -1,0 +1,49 @@
+.courses-category {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #e7f8ee;
+	border-radius: 10px;
+}
+.list-category-course {
+	a {
+		padding: 0 20px;
+		line-height: 3;
+		border: 1px solid rgba(48,146,85,0.2);
+		border-radius: 10px;
+		font-size: 15px;
+		font-weight: 500;
+		display: inline-block;
+		margin: 0 10px;
+		&:hover {
+			background-color: #309255;
+			border-color: #309255;
+			color: #fff;
+		}
+		&.active {
+			background-color: #309255;
+			border-color: #309255;
+			color: #fff;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px){
+    .list-category-course {
+        a {
+            font-size: 12px;
+            padding: 0 8px;
+            margin: 0 0 10px 3px;
+        }
+    }
+    .courses-category {
+        display: block;
+        padding: 10px;
+    }
+    .card-search-box {
+        input {
+            width: 100%;
+        }
+    }
+    
+}

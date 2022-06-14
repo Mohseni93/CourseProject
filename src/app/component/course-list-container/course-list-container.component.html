@@ -1,0 +1,65 @@
+<main>
+    <div class="main-banner">
+        <div class="box-image-banner">
+            <div class="shape-1">
+                <img class="animation-round" src="./assets/image/shape-1.png" alt="shape" title="shape-1">
+            </div>
+            <div class="shape-2">
+                <img src="./assets/image/shape-2.png" alt="shape" title="shape-2">
+            </div>
+            <div class="shape-3">
+                <img src="./assets/image/shape-3.png" alt="shape" title="shape-3">
+            </div>
+            <div class="shape-4">
+                <img src="./assets/image/shape-24.png" alt="shape" title="shape-4">
+            </div>
+            <div class="shape-5 hidden-xs">
+                <img class="animation-left" src="./assets/image/shape-5.png" alt="shape" title="shape-5">
+            </div>
+        </div>
+        <div class="container">
+            <div class="content-main-banner">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                    </ol>
+                </nav>
+                <div class="title-page">
+                    <h2>
+                        My
+                        <span>
+                            Courses
+                        </span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="devider-30"></div>
+    <div class="container">
+        <div class="courses-category">
+            <div class="list-category-course">
+                <a class="active" href="javascript://">AllCourse</a>
+                <a href="javascript://">Collections</a>
+                <a href="javascript://">Wishlist</a>
+                <a href="javascript://">Archived</a>
+            </div>
+            <div class="card-search-box">
+                <form action="#">
+                    <input type="text" placeholder="Search youre course">
+                    <button class="btn-search-course" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="devider-30"></div>
+        <div class="course-list">
+            <div class="row">
+                <app-courses [courseListInput]="myCourseList">
+                </app-courses>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CourseListContainerComponent } from './course-list-container/course-list-container.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { RegisterFormComponent } from './register-form/register-form.component';
+import { CourseListContainerComponent } from './component/course-list-container/course-list-container.component';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { RegisterFormComponent } from './component/register-form/register-form.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },

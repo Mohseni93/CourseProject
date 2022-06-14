@@ -1,0 +1,157 @@
+.all-course-page {
+	&.main-banner {
+		height: 850px;
+	}
+	.box-image-banner {
+		.shape-1 {
+			top: 20%;
+		}
+		.shape-5 {
+			top: 30% !important;
+			right: 30% !important;
+		}
+	}
+}
+.slider-img-course {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 56%;
+	height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+.slider-courses-box {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	.box-content {
+		width: 140px;
+		height: 140px;
+		text-align: center;
+		background-color: #309255;
+		border-radius: 50%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin: 0 auto;
+		.box-wrapper {
+			color: #fff;
+			font-size: 18px;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.shape-1 {
+		top: 100% !important;
+	}
+}
+.content-main-banner {
+	&.slider-content {
+		max-width: 400px;
+		.sub-title {
+			color: #309255;
+			font-size: 18px;
+			margin-bottom: 20px;
+			font-weight: 500;
+		}
+		p {
+			font-size: 18px;
+			margin: 30px 0;
+		}
+	}
+}
+.btn-start-cousre {
+	color: #fff;
+	margin: 20px 0;
+}
+.box-search-course-home-page {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+@media only screen and (max-width: 768px)  {
+    .main-banner {
+        &.all-course-page {
+            display: block;
+            height: 700px;
+        }
+    }
+    .slider-courses-box {
+        top: auto;
+        left: auto;
+        bottom: 37%;
+        right: 9%;
+        .shape-1 {
+            width: 80px;
+        }
+        .box-content {
+            width: 80px;
+            height: 80px;
+            .box-wrapper {
+                font-size: 13px;
+            }
+        }
+    }
+    .card-search-box {
+        input {
+            width: 100%;
+        }
+    }
+    .container-slider-courses {
+        padding: 10px;
+        .list-slider-courses {
+            .item-slider-course {
+                button {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    .all-course-page {
+        .main-banner {
+            height: 700px;
+            display: block;
+        }
+        .box-image-banner {
+            .shape-1 {
+                display: none;
+            }
+        }
+    }
+    .slider-img-course {
+        position: relative;
+        width: 68%;
+        margin-left: auto;
+        display: block;
+    }
+    .content-main-banner {
+        &.slider-content {
+            margin-top: 50px;
+        }
+    }
+    .box-search-course-home-page {
+        display: block;
+        .title-page {
+            margin-bottom: 20px;
+        }
+    }
+    
+}

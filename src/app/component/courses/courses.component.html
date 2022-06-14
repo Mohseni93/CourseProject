@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-lg-4" *ngFor="let item of courseListInput">
+        <div class="item-single-course">
+            <div class="course-img">
+                <a href="javascrpt://">
+                    <img [src]="item.image" [alt]="item.title" [title]="item.title">
+                </a>
+            </div>
+            <div class="detailse-course">
+                <h3>
+                    <a href="javascript://">
+                        {{item.title}}
+                    </a>
+                </h3>
+                <div class="course-info">
+                    <span>
+                        <i class="fa fa-times"></i>
+                        {{item.time}}
+                    </span>
+                    <span>
+                        <i class="fas fa-book-open"></i>
+                        {{item.lecture}}
+                    </span>
+                </div>
+                <div class="courses-rating" *ngIf="item.rating && item.selected">
+                    <p>{{item.rating}}% Complete</p>
+                    <div class="rating-progress-bar">
+                        <div class="rating-line" [ngStyle]="{'width': item.rating +'%'}"></div>
+                    </div>
+                </div>
+                <span *ngIf="item.selected == false && !item.selected">
+                    <div class="course-price" *ngIf="item.oldPrice ; else newPrice">
+                        <span class="new-price">{{item.newPrice}}</span>
+                        <span class="old-price">
+                            <del>{{item.oldPrice}}</del>
+                        </span>
+                    </div>
+                    <ng-template #newPrice>
+                        <div class="course-price">
+                            <span class="new-price">{{item.newPrice}}</span>
+                        </div>
+                    </ng-template>
+                </span>
+                <span class="btn btn-primary btn-selcte-course" *ngIf="item.selected">Ready to use</span>
+                <button class="btn btn-primary btn-selcte-course" type="button" (click)="addCourse(item)"
+                    *ngIf="!item.selected">‌Buy Now
+                </button>                                                       
+            </div>
+        </div>
+    </div>
+</div>
