@@ -24,15 +24,16 @@ body {
 }
 ::-webkit-scrollbar {
 	width: 10px;
-	height: 10px;
+	height: 8px;
 }
 ::-webkit-scrollbar-track {
 	background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-	background: rgb(214, 214, 214);
+	background: #007748;
+    border-radius: 5px;
 	&:hover {
-		background: rgb(136, 136, 136);
+		background: #019c5e;
 	}
 }
 ul {
@@ -71,6 +72,16 @@ input {
 .devider-50 {
 	height: 50px;
 	clear: both;
+}
+button:focus{
+	background-color: unset;
+	border-color: unset;
+	box-shadow: unset;
+}
+button:active{
+	background-color: unset;
+	border-color: unset;
+	box-shadow: unset;
 }
 .btn {
 	display: inline-block;
@@ -153,6 +164,20 @@ input {
 	border: .5px solid #000;
 	transition: .25s all;
 }
+.main-logo{
+	&.footer{
+		h3{
+			color: #fff;
+		}
+	}
+	h3{
+		font-size: 35px;
+		font-weight: 500;
+		.color-logo{
+			color: #267544;
+		}
+	}
+}
 .title-page {
 	font-size: 20px;
 	color: #333;
@@ -179,8 +204,8 @@ input {
 .main-banner {
 	position: relative;
 	background-color: #e7f8ee;
-	height: 500px;
-	padding-top: 11%;
+	height: 250px;
+	padding-top: 8%;
 	display: flex;
 	align-items: center;
 	.breadcrumb {
@@ -208,11 +233,12 @@ input {
 	}
 	.shape-3 {
 		position: absolute;
-		top: 40%;
+		top: 56%;
 		right: 15%;
-		z-index: 111;
+		z-index: 1111;
 		img {
 			border-radius: 100px;
+			width: 150px;
 		}
 	}
 	.shape-4 {
@@ -223,7 +249,7 @@ input {
 	}
 	.shape-5 {
 		position: absolute;
-		top: 40%;
+		top: 53%;
 		right: 25%;
 		z-index: 11;
 	}
@@ -237,7 +263,7 @@ input {
 		line-height: 3;
 		padding: 10px;
 		color: #aaa;
-		border: 1px solid rgba(48,146,85,0.2);
+		border: 1px solid rgb(153 155 154 / 20%);
 		padding-right: 90px;
 	}
 	.btn-search-course {
@@ -286,10 +312,13 @@ input {
 	}
 }
 .item-single-course {
+	position: relative;
 	padding: 15px;
 	border: 1px solid #deede4;
 	border-radius: 10px;
 	margin-bottom: 30px;
+	min-height: 500px;
+	max-width: 400px;
 	.course-img {
 		padding: 10px;
 		img {
@@ -439,7 +468,7 @@ input {
         order: 1;
     }
     .main-banner {
-        height: 400px;
+        height: 200px;
     }
     .box-image-banner {
         .shape-4 {

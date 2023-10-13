@@ -2,9 +2,10 @@
 .content-footer {
 	position: relative;
 	margin-top: 50px;
-	background-color: #e7f8ee;
+	background-color: #343b56;
 	padding: 50px;
 	z-index: 1;
+	color: #fff;
 	.shape1-footer {
 		position: absolute;
 		top: 10px;
@@ -26,7 +27,7 @@
 				padding: 10px 0;
 				font-size: 14px;
 				a {
-					color: #212832;
+					color: #fff;
 					transition: 0.3s;
 					&:hover {
 						color: #309255;
@@ -46,7 +47,7 @@
 	}
 	.socail-item-footer {
 		i {
-			color: #212832;
+			color: #fff;
 			padding: 0 10px;
 			font-size: 20px;
 			&:hover {

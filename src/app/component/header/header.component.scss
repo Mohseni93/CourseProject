@@ -9,10 +9,11 @@
 		justify-content: space-between;
 		align-items: center;
 		max-width: 1200px;
-		margin: 50px auto;
+		margin: 28px auto;
 		padding: 20px;
 		border: 1px solid rgba(48,146,85,0.25);
 		border-radius: 10px;
+
 	}
 }
 .header-top {
@@ -42,19 +43,23 @@
 		li {
 			position: relative;
 			display: inline-block;
-			padding: 10px;
+			
 			&:hover {
 				.sub-main-menu {
-					top: 50px;
+					top: 40px;
 					opacity: 1;
 					visibility: visible;
 				}
+                a{
+                    padding: 10px;
+                }
 			}
 		}
 	}
 	.item-main-menu {
 		font-size: 17px;
 		font-weight: 500;
+        padding: 10px;
 		color: #333;
 		&:hover {
 			color: #267544;
@@ -62,7 +67,7 @@
 	}
 	.sub-main-menu {
 		position: absolute;
-		top: 20px;
+		top: 50px;
 		left: -17px;
 		z-index: 111;
 		max-width: 300px;
@@ -75,11 +80,13 @@
 		.list-sub-menu {
 			li {
 				display: block;
+                padding: 10px 0;
 			}
 		}
 		.item-sub-menu {
 			font-size: 14px;
 			font-weight: 400;
+            padding: 10px;
 		}
 	}
 }
@@ -87,17 +94,17 @@
 	position: relative;
 	a {
 		padding: 10px;
-		font-size: 17px;
+		font-size: 15px;
 		font-weight: 500;
 	}
 	.link-register-header {
-		display: inline-block;
-		padding: 10px 40px;
-		text-align: center;
-		background-color: #fff;
-		border: 1px solid #267544;
-		border-radius: 8px;
-		line-height: 2;
+	    display: inline-block;
+    padding: 3px 11px;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #267544;
+    border-radius: 8px;
+    line-height: 2;
 	}
 }
 .profile-user {
@@ -159,10 +166,17 @@
             padding: 10px;
         }
     }
-    .main-logo {
-        img {
-            width: 140px;
-        }
+    .main-logo{
+            img {
+                width: 140px;
+            }
+            h3{
+                font-size: 18px;
+                font-weight: 500;
+                .color-logo{
+                    color: #267544;
+                }
+            }
     }
     .nav-toggle {
         .menu-toggle {
@@ -304,7 +318,7 @@
     }    
     .box-login-register-mob {
         text-align: center;
-        margin: 40px 0;
+        margin: 0;
         a {
             padding: 0 10px;
             line-height: 3;

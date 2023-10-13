@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
   submitted: boolean = false;
   userName: string = "";
   ngOnInit(): void {
+    
     this.sub.add(this.registerService.allFormData.subscribe(res => {
       this.submitted = res;
     }))
